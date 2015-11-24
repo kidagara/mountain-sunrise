@@ -1,0 +1,57 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "foundation_and_overrides";
+
+.left-title {
+	font-family: "Cinzel", serif !important;
+	text-transform: uppercase !important;
+}
+
+.home-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.home-title {
+	color: $white;
+	font-size: rem-calc(28);
+	font-family: "Cinzel", serif !important;
+	line-height: 90%;
+}
+
+.home-top-logo {
+	padding-top: rem-calc(28);
+	img {
+		margin-left: -25px;
+		margin-bottom: -10px;
+	}
+}
+
+.home-icon {
+	padding-top: rem-calc(40);
+}
+
+.home-top {
+	width: 100%;
+	height: 138px;
+	background: rgba(48, 32, 19, 0.7);
+	// the color is #302013
+	margin: 0px;
+	font-family: "Cinzel", serif !important;
+	li {
+		padding-top: rem-calc(90);
+		font-size: rem-calc(13);
+		a {
+			color: $white;
+			padding-top: rem-calc(10);
+		}
+	}
+}
+
+.home-background {
+	background: url(image_path('placeholder.jpg')) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

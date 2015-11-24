@@ -1,0 +1,38 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <%= link_to image_tag('MountainSunriseIcon.png', alt: 'Mountain Sunrise Feed Co.'), root_path %>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li>
+        <%= link_to nil, "Dealers" %>
+      </li>
+      <li>
+        <%= link_to nil, "Products" %>
+      </li>
+      <li>
+        <%= link_to nil, "Analysis" %>
+      </li>
+      <li>
+        <%= link_to nil, "FAQs" %>
+      </li>
+      <li>
+        <%= link_to nil, "Contact" %>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="name">
+      <%= link_to nil, "Mountain Sunrise Feed Co.", :class => "left-title" %>
+      </li>
+
+    </ul>
+  </section>
+</nav>
