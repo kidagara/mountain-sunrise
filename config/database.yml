@@ -17,7 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: mountainsunrise
+  username: postgres
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -82,5 +82,4 @@ test:
 production:
   <<: *default
   database: mountainsunrise_production
-  username: mountainsunrise
   password: <%= ENV['MOUNTAINSUNRISE_DATABASE_PASSWORD'] %>
