@@ -11,19 +11,17 @@
 			</ul>
 		</div>
 	<% end %>
-	<p>
-		<%=f.label :username %><br/>
+
+		<%=f.label :username %>
 		<%= f.text_field :username %>
-	</p>
-	<p>
-		<%=f.label :password %><br/>
+
+		<%=f.label :password %>
 		<%= f.password_field :password %>
-	</p>
-	<p>
-		<%=f.label :password_confirmation %><br/>
+
+		<%=f.label :password_confirmation %>
 		<%= f.password_field :password_confirmation %>
-	</p>
 
 
-	<p class="button"><%= f.submit %></p>
+
+	<%= submit_tag "Login", class: "button radius" %>
 <% end %>

@@ -8,7 +8,13 @@
 		</div>
 		<div class="medium-5 columns end">
 			<ul class="inline-list right">
+				<% if current_user %>
+					<li><%= current_user.username %></li>
+					<li><%= link_to content_tag(:span, nil, class: "fa fa-sign-out"), nil, title: "Sign Out" %></li>
+				<% else %>
+
 				<li><%= link_to content_tag(:span, nil, class: "fa fa-cogs"), nil, title: "Sign In" %></li>
+				<% end %>
 			</ul>
 		</div>
 	</section>

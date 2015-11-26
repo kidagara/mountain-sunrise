@@ -2,6 +2,11 @@
 @import "font-awesome";
 @import "foundation_and_overrides";
 
+h1 {
+	font-family: "Cinzel", serif !important;
+	text-transform: uppercase;
+}
+
 .left-title {
 	font-family: "Cinzel", serif !important;
 	text-transform: uppercase !important;
