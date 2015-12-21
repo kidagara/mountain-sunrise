@@ -1,0 +1,12 @@
+@import "foundation_and_overrides";
+
+.state-panel {
+	text-align: center;
+	padding: 10px;
+	a {
+		color: $primary-color;
+		&:hover {
+			color: $steel;
+		}
+	}
+}

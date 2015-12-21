@@ -21,11 +21,7 @@
       <%= yield %>
     <% else %>
       <%= render "site_header" %>
-      <div class="row">
-        <div class="columns">
-          <%= yield %>
-        </div>
-      </div>
+      <%= yield %>
     <% end %>
 
     <%= render "site_footer" %>

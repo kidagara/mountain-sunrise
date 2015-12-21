@@ -1,1 +1,61 @@
-<h1>dealers</h1>
+<div class="sub-page-header">
+	<div class="row">
+		<div class="columns">
+			<h1>
+				dealers
+				<small>
+					<%= link_to new_dealer_path, title: "Create a new dealer state" do %>
+						<span class="fa fa-plus-square-o"></span>
+					<% end %>
+				</small>
+			</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<h4>Select a state</h4>
+
+	<div class="medium-3 columns state-panel">
+		<%= link_to root_path do %>
+			<%= image_tag('Arizona_State.png', alt: 'Arizona Dealers')%>
+			<p>Arizona</p>
+		<% end %>
+	</div>
+	<div class="medium-3 columns state-panel">
+		<%= link_to root_path do %>
+			<%= image_tag('California_State.png', alt: 'California Dealers')%>
+			<p>California</p>
+		<% end %>
+	</div>
+	<div class="medium-3 columns state-panel">
+		<%= link_to root_path do %>
+			<%= image_tag('Colorado_State.png', alt: 'Colorado Dealers')%>
+			<p>Colorado</p>
+		<% end %>
+	</div>
+	<div class="medium-3 columns state-panel">
+		<%= link_to root_path do %>
+			<%= image_tag('Florida_State.png', alt: 'Florida Dealers')%>
+			<p>Florida</p>
+		<% end %>
+	</div>
+	<div class="medium-3 columns state-panel">
+		<%= link_to root_path do %>
+			<%= image_tag('Idaho_State.png', alt: 'Idaho Dealers')%>
+			<p>Idaho</p>
+		<% end %>
+	</div>
+	<div class="medium-3 columns state-panel">
+		<%= link_to root_path do %>
+			<%= image_tag('Nevada_State.png', alt: 'Nevada Dealers')%>
+			<p>Nevada</p>
+		<% end %>
+	</div>
+	<div class="medium-3 columns state-panel end">
+		<%= link_to root_path do %>
+			<%= image_tag('Utah_State.png', alt: 'Utah Dealers')%>
+			<p>Utah</p>
+		<% end %>
+	</div>
+</div>

@@ -99,6 +99,16 @@ h1 {
 	}
 }
 
+span {
+	color: $secondary-color;
+}
+
+.sub-page-header {
+	width: 100%;
+	padding: 10px 0px;
+	background: #7a8714;
+}
+
 footer {
 	background: $third-color;
 	color: $secondary-color;

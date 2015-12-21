@@ -1,3 +1,6 @@
 class Dealer < ActiveRecord::Base
-	validates :name, presence: true
+	validates :name, 
+			  :city,
+			  :state,
+			  :phone_number, presence: true
 end

@@ -42,7 +42,7 @@ class DealersController < ApplicationController
     @dealer = Dealer.find(params[:id]) if params[:id]
   end
 
-  def job_params
+  def dealer_params
     params.require(:dealer).permit(:name, :city, :state, :phone_number, :website)
   end
 

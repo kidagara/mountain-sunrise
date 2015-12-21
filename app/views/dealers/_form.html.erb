@@ -1,4 +1,4 @@
-<%= form_for [:dealers, @dealer] do |f| %>
+<%= form_for [@dealer] do |f| %>
 	<%= content_tag :div, class: "alert-box radius alert" do %>
 		<h4><%= pluralize @dealer.errors.count, "error" %> kept this form from submitting</h4>
 		<ul>
@@ -8,15 +8,17 @@
 		</ul>
 	<% end if @dealer.errors.any? %>
 
-	<% f.label :name %>
-	<% f.text_field :name %>
-	<% f.label :city %>
-	<% f.text_field :city %>
-	<% f.label :state %>
-	<% f.text_field :state %>
-	<% f.label :phone_number %>
-	<% f.text_field :phone_number %>
-	<% f.label :website %>
-	<% f.url_field :website, placeholder: "http://example.com" %>
-	<% f.submit class: "button radius" %>
+	<%= f.label :store_name %>
+	<%= f.text_field :store_name %>
+	<%= f.label "Store contact name - This will only be seen by you (optional)" %>
+	<%= f.text_field :contact_name %>
+	<%= f.label :city %>
+	<%= f.text_field :city %>
+	<%= f.label "State - use 2 letter abbreviation" %>
+	<%= f.text_field :state %>
+	<%= f.label :phone_number %>
+	<%= f.text_field :phone_number %>
+	<%= f.label "Website (optional)" %>
+	<%= f.url_field :website, placeholder: "http://example.com" %>
+	<%= f.submit class: "button radius" %>
 <% end %>

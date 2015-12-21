@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20151221202622) do
   enable_extension "plpgsql"
 
   create_table "dealers", force: :cascade do |t|
-    t.string   "name"
+    t.string   "store_name"
+    t.string   "contact_name"
     t.string   "city"
     t.string   "state",        limit: 2
     t.string   "phone_number"
