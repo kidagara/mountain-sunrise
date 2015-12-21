@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "log_in", to: "sessions#create", as: "log_in"
   get "sign_up", to: "users#new", as: "sign_up"
   
-  resources :users, :sessions, :dealers
+  resources :users, :sessions, :dealers, :arizona
 
   root to: "home#index"
 end

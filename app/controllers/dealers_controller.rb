@@ -17,7 +17,7 @@ class DealersController < ApplicationController
   def create
   	@dealer = Dealer.new(dealer_params)
   	if @dealer.save
-  		redirect_to dealers_path, notice: %(Saved "#{@dealer.name}" successfully.)
+  		redirect_to dealers_path, notice: %(Saved "#{@dealer.store_name}" successfully.)
   	else
   		render :new
   	end
@@ -25,7 +25,7 @@ class DealersController < ApplicationController
 
   def update
   	if @dealer.update(dealer_params)
-			redirect_to about_jobs_path, notice: %(Updated "#{@job.title}" successfully.)
+			redirect_to dealers_path, notice: %(Updated "#{@dealer.store_name}" successfully.)
 		else
 			render :edit
 		end
@@ -43,7 +43,7 @@ class DealersController < ApplicationController
   end
 
   def dealer_params
-    params.require(:dealer).permit(:name, :city, :state, :phone_number, :website)
+    params.require(:dealer).permit(:store_name, :contact_name, :city, :state, :phone_number, :website)
   end
 
 end

@@ -1,0 +1,38 @@
+<div class="sub-page-header">
+	<div class="row">
+		<div class="columns">
+			<h1>
+				Arizona Dealers
+			</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="columns">
+		<table class="table-minimal">
+			<thead>
+				<tr>
+					<th>City</th>
+					<th>Store Name</th>
+					<th>Phone Number</th>
+					<% if current_user.username == "ehuntsman" %>
+						<th>Store Contact</th>
+					<% end if current_user %>
+				</tr>
+			</thead>
+			<tbody>
+				<% @dealers.each do |dealer| %>
+					<tr>
+						<td><%= dealer.city %></td>
+						<td><%= dealer.store_name %></td>
+						<td><%= dealer.phone_number %></td>
+						<% if current_user.username == "ehuntsman" %>
+							<td><%= dealer.contact_name %></td>
+						<% end if current_user %>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
