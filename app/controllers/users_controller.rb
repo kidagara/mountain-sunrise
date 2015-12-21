@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :find_user
+
+  def index
+    @users = User.order("username DESC")
+  end
+
   def new
   	@user = User.new
   end
@@ -15,6 +21,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def find_user
+    @user = User.find(params[:id]) if params[:id]
+  end
 
   def user_params
     params.require(:user).permit(:username, :password, :password_confirmation)

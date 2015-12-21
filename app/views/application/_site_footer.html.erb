@@ -1,21 +1,21 @@
-<footer class="site-footer">
-	<hr/>
-	<section class="row">
-		<div class="medium-7 columns">
-			<ul class="inline-list">
-				<li>&copy; <%= Time.now.year %> Mountain Sunrise Feed Co.</li>
-			</ul>
-		</div>
-		<div class="medium-5 columns end">
-			<ul class="inline-list right">
-				<% if current_user %>
-					<li><%= current_user.username %></li>
-					<li><%= link_to content_tag(:span, nil, class: "fa fa-sign-out"), log_out_path, title: "Sign Out" %></li>
-				<% else %>
-
-				<li><%= link_to content_tag(:span, nil, class: "fa fa-cogs"), log_in_path, title: "Sign In" %></li>
-				<% end %>
-			</ul>
-		</div>
-	</section>
+<footer>
+  <section class="row">
+    <div class="medium-7 columns">
+      <ul class="inline-list">
+        <li><small>&copy; <%= Time.now.year %> Mountain Sunrise Feed Co.</small></li>
+      </ul>
+    </div>
+    <div class="medium-5 columns end hide-for-small">
+      <ul class="inline-list right">
+        <% if current_user %>
+          <li>
+            <%= current_user.username %>
+          </li>
+          <li><%= link_to content_tag(:span, nil, class: "fa fa-sign-out"), log_out_path, title: "Sign out" %></li>
+        <% else %>
+          <li><%= link_to content_tag(:span, nil, class: "fa fa-cogs"), log_in_path, title: "Sign in" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
 </footer>
