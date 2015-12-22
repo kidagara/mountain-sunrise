@@ -9,9 +9,9 @@
       <ul class="inline-list right">
         <% if current_user %>
           <li>
-            <%= current_user.username %>
+            <small><%= current_user.username %></small>
           </li>
-          <li><%= link_to content_tag(:span, nil, class: "fa fa-sign-out"), log_out_path, title: "Sign out" %></li>
+          <li><small><%= link_to content_tag(:span, nil, class: "fa fa-sign-out"), log_out_path, title: "Sign out" %></small></li>
         <% else %>
           <li><%= link_to content_tag(:span, nil, class: "fa fa-cogs"), log_in_path, title: "Sign in" %></li>
         <% end %>

@@ -2,6 +2,12 @@
 @import "font-awesome";
 @import "foundation_and_overrides";
 
+body {
+	margin: 0;
+	padding: 0;
+	height: 100% !important;
+}
+
 h1 {
 	font-family: "Cinzel", serif !important;
 	text-transform: uppercase;
@@ -110,7 +116,9 @@ span {
 }
 
 footer {
-	background: $third-color;
-	color: $secondary-color;
+	border-top: 1px solid $third-color;
 	padding-top: 10px;
+	span {
+		color: $primary-color;
+	}
 }
