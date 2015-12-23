@@ -1,0 +1,16 @@
+<%= form_for [@analysis] do |f| %>
+	<%= content_tag :div, class: "alert-box radius alert" do %>
+		<h4><%= pluralize @analysis.errors.count, "error" %> kept this form from submitting</h4>
+		<ul>
+			<% @analysis.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end if @analysis.errors.any? %>
+
+	<%= f.label :date %>
+	<%= f.date :date %>
+	<%= f.label :analysis_product %>
+	<%= f.text_field :analysis_product %>
+	<%= f.submit class: "button radius" %>
+<% end %>
