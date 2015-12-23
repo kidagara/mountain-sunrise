@@ -1,5 +1,5 @@
-class AnalysisController < ApplicationController
-	before_action :find_analysis
+class ReportController < ApplicationController
+	before_action :find_report
 
   def index
   end
@@ -8,42 +8,42 @@ class AnalysisController < ApplicationController
   end
 
   def new
-  	@analysis = Analysis.new
+  	@report = Report.new
   end
 
   def edit
   end
 
   def create
-  	@analysis = Analysis.new(analysis_params)
-  	if @analysis.save
-  		redirect_to analysis_path, notice: %(Saved "#{@analysis.date}" successfully.)
+  	@report = Report.new(analysis_params)
+  	if @report.save
+  		redirect_to analysis_path, notice: %(Saved "#{@report.date}" successfully.)
   	else
   		render :new
   	end
   end
 
   def update
-  	if @analysis.update(analysis_params)
-			redirect_to analysiss_path, notice: %(Updated "#{@analysis.date}" successfully.)
+  	if @report.update(analysis_params)
+			redirect_to analysiss_path, notice: %(Updated "#{@report.date}" successfully.)
 		else
 			render :edit
 		end
 	end
 
   def destroy
-    @analysis.destroy
+    @report.destroy
     redirect_to analysis_path
   end
 
 	private
 
-  def find_analysis
-    @analysis = Analysis.find(params[:id]) if params[:id]
+  def find_report
+    @report = Report.find(params[:id]) if params[:id]
   end
 
   def analysis_params
-    params.require(:analysis).permit(:date, :analysis_product)
+    params.require(:report).permit(:date, :analysis_product)
   end
 
 end

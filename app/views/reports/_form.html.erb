@@ -1,12 +1,12 @@
-<%= form_for [@analysis] do |f| %>
+<%= form_for [@report] do |f| %>
 	<%= content_tag :div, class: "alert-box radius alert" do %>
-		<h4><%= pluralize @analysis.errors.count, "error" %> kept this form from submitting</h4>
+		<h4><%= pluralize @report.errors.count, "error" %> kept this form from submitting</h4>
 		<ul>
-			<% @analysis.errors.full_messages.each do |message| %>
+			<% @report.errors.full_messages.each do |message| %>
 				<li><%= message %></li>
 			<% end %>
 		</ul>
-	<% end if @analysis.errors.any? %>
+	<% end if @report.errors.any? %>
 
 	<%= f.label :date %>
 	<%= f.date :date %>

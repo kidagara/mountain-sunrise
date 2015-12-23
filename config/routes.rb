@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get "log_in", to: "sessions#create", as: "log_in"
   get "sign_up", to: "users#new", as: "sign_up"
   
-  resources :users, :sessions, :dealers, :analysis, :arizona, :california, :colorado, :florida, :idaho, :nevada, :utah
+  resources :users, :sessions, :dealers, :arizona, :california, :colorado, :florida, :idaho, :nevada, :utah
+  resources :analysis
 
   namespace :products do
   	namespace :pellets do

@@ -1,6 +1,6 @@
-class CreateAnalysis < ActiveRecord::Migration
+class CreateReports < ActiveRecord::Migration
   def change
-    create_table :analysis do |t|
+    create_table :reports do |t|
       t.date :date
       t.string :analysis_product
 
