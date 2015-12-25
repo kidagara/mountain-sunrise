@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "sign_up", to: "users#new", as: "sign_up"
   
   resources :users, :sessions, :dealers, :arizona, :california, :colorado, :florida, :idaho, :nevada, :utah
-  resources :analysis
+  resources :reports
 
   namespace :products do
   	namespace :pellets do

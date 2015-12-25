@@ -1,4 +1,4 @@
-class ReportController < ApplicationController
+class ReportsController < ApplicationController
 	before_action :find_report
 
   def index
