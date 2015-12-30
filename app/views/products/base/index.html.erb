@@ -2,15 +2,56 @@
 	<div class="row">
 		<div class="columns">
 			<h1>
-				Products Base Page
+				Our Products
 			</h1>
 		</div>
 	</div>
 </div>
 
 <div class="row">
-	<div class="columns">
-		<%= link_to "pellets", products_pellets_root_path %><br/>
-		<%= link_to "compact bales", products_compactbales_root_path %>
+	<div class="large-6 columns product-panel product-left">
+		<h1><%= link_to "pellets", products_pellets_root_path %></h1>
+		<p>Our pellet products are made from clean, high quality forage that will meet the roughage requirements for your horse.</p>
+		<p>Because of the high quality of the forages, our pellets are very palatable, and no molasses is needed. Our quarter inch die allows us to form a firm pellet without the use of bentonite. With no dust, no waste, and no additives, our product is easy to store, easy to feed, and easy to digest. Because of the pelleting process, all of our pelleted products are approved for wilderness and National Forest use.</p>
+		<p>For more information on each pellet type, please click below.</p>
+		<div class="row pellet-panels">
+			<div class="medium-4 columns">
+				<h3><%= link_to "alfalfa timothy pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "alfalfa hay pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "timothy hay pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "bermuda alfalfa pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "bermuda pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "bermuda plus pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "alfalfa/timothy brome pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "oat hay pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns">
+				<h3><%= link_to "oat hay alflafa pellets", products_pellets_root_path %></h3>
+			</div>
+			<div class="medium-4 columns end">
+				<h3><%= link_to "sunrise complete 80/20 high energy pellets", products_pellets_root_path %></h3>
+			</div>
+		</div>
+	</div>
+	<div class="large-6 columns product-panel product-right">
+		<h1><%= link_to "compact bales", products_compactbales_root_path %></h1>
+		<p>Our compact elite bales are inspected several times before packaging to provide consistent high quality.</p>
+		<p>Each bale weighs approximately 55 pounds. This helps ensure that the correct amount is fed each day. Because the stems in our bales are flattened, it is harder for horses to separate the leaf from the stem, therefore there is no waste.</p>
+		<p>Bales are packaged in blocks of 24. This makes for easy handling and convenient storage.</p>
+		<h3>Our compact elite bales come in alfalfa.</h3>
 	</div>
 </div>

@@ -1,0 +1,25 @@
+<div class="sub-page-header">
+	<div class="row">
+		<div class="columns">
+			<h1>
+				Frequently Asked Questions
+				<%= link_to new_faq_path, title: "Create a new FAQ" do %>
+					<span class="fa fa-plus-square-o"></span>
+				<% end %>
+			</h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="columns">
+		<% @faqs.each do |faq| %>
+			<h2 class="faq-question"><%= faq.question %>
+				<%= link_to edit_faq_path(faq), title: "Edit FAQ" do %>
+					<span class="fa fa-edit"></span>
+				<% end %>
+			</h2>
+			<p class="faq-answer"><%= faq.answer %></p>
+		<% end %>
+	</div>
+</div>

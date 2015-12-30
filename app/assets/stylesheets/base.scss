@@ -2,6 +2,10 @@
 @import "font-awesome";
 @import "foundation_and_overrides";
 
+// .columns {
+// 	border: 1px solid red;
+// }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -21,6 +25,16 @@ h1 {
 .home-logo {
 	display: block;
 	margin: 0 auto;
+}
+
+.contact-us {
+	h2 {
+		font-family: 'Amatic SC', cursive !important;
+		color: $green-color !important;
+	}
+	.panel {
+		margin-top: 10px;
+	}
 }
 
 .home-title {
@@ -92,33 +106,77 @@ h1 {
 
 .home-base {
 	width: 100%;
-	background: #7a8714;
-	padding-top: 25px;
+	background: $white;
+	// background: $green-color;
+	padding: 80px 0px;
+	margin-top: -61px;
+	z-index: 1;
+	position: relative;
+}
+
+table {
+	margin-top: 20px;
+}
+
+.home-attention-bar {
+	text-align: center;
+	// background: black;
+	background: url(image_path('chalkboard.png')) no-repeat center;
+	margin-top: -61px;
+	height: 122px;
+	z-index: 2;
+	position: relative;
 }
 
 .home-attention-left {
 	color: $third-color;
 	padding-right: 10px;
-	h4 {
-		font-family: "Cinzel", serif !important;
-		color: $third-color;
+	h1 {
+		font-family: 'Amatic SC', cursive !important;
+		color: $green-color;
 	}
 }
 
 span {
-	color: $secondary-color;
+	color: $primary-color;
+	font-size: 20px !important;
+}
+
+.pellet-image {
+	position: relative;
+	z-index: -1;
+	margin-top: -30px;
+	text-align: center;
+}
+
+.intro {
+	color: $green-color;
+	font-family: 'Amatic SC', cursive !important;
+	font-size: 35px;
+	line-height: 18px;
 }
 
 .sub-page-header {
 	width: 100%;
 	padding: 10px 0px;
-	background: #7a8714;
+	background: $green-color;
+}
+
+.amantic h3 {
+	font-family: 'Amatic SC', cursive !important;
+	font-size: 45px;
+	color: $white;
+	text-shadow:
+	   -1px -1px 0 #000,  
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	     1px 1px 0 #000;
 }
 
 footer {
 	border-top: 1px solid $third-color;
 	padding-top: 10px;
 	span {
-		color: $primary-color;
+		color: $green-color;
 	}
 }

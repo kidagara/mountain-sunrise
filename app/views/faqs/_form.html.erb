@@ -1,0 +1,16 @@
+<%= form_for [@faq] do |f| %>
+	<%= content_tag :div, class: "alert-box radius alert" do %>
+		<h4><%= pluralize @faq.errors.count, "error" %> kept this form from submitting</h4>
+		<ul>
+			<% @faq.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end if @faq.errors.any? %>
+
+	<%= f.label :question %>
+	<%= f.text_field :question %>
+	<%= f.label :answer %>
+	<%= f.text_area :answer %>
+	<%= f.submit class: "button radius" %>
+<% end %>

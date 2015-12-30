@@ -4,7 +4,9 @@
 	text-align: center;
 	padding: 10px;
 	a {
-		color: $primary-color;
+		color: $green-color;
+		font-family: 'Amatic SC', cursive !important;
+		font-size: 20px;
 		&:hover {
 			color: $steel;
 		}

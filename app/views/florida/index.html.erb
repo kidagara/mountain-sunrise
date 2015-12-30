@@ -18,6 +18,8 @@
 					<th>Phone Number</th>
 					<% if current_user.username == "ehuntsman" %>
 						<th>Store Contact</th>
+						<th>edit</th>
+						<th>delete</th>
 					<% end if current_user %>
 				</tr>
 			</thead>
@@ -29,6 +31,16 @@
 						<td><%= dealer.phone_number %></td>
 						<% if current_user.username == "ehuntsman" %>
 							<td><%= dealer.contact_name %></td>
+							<td>
+								<%= link_to edit_dealer_path(dealer), title: "Edit Dealer" do %>
+									<span class="fa fa-edit"></span>
+								<% end %>
+							</td>
+							<td>
+								<%= link_to dealer_path(dealer), data: { confirm: %(Are you sure you want to delete "#{dealer.store_name}"? This cannot be undone.) }, method: :delete do %>
+									<span class="fa fa-trash"></span>
+								<% end %>
+							</td>
 						<% end if current_user %>
 					</tr>
 				<% end %>
